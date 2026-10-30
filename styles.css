@@ -1,0 +1,272 @@
+
+/* SELECTOR GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+/* SELECTOR DE ETIQUETA */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+
+/* ENCABEZADO */
+.encabezado {
+    background-color: #173b63;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* NAVEGACIÓN CON FLEXBOX */
+.navegacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    background-color: #2563eb;
+    padding: 15px;
+}
+
+.navegacion a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* PSEUDOCLASE HOVER */
+.navegacion a:hover {
+    color: #facc15;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 25px auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* TARJETAS */
+.tarjeta {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* SELECTOR DE IDENTIFICADOR */
+#registro {
+    border-top: 5px solid #2563eb;
+}
+
+/* TÍTULOS */
+h1,
+h2 {
+    margin-top: 0;
+}
+
+/* FORMULARIO */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* AGRUPACIÓN DE CAMPOS */
+fieldset {
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+legend {
+    color: #173b63;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+/* CAMPOS */
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 15px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+/* EFECTO AL SELECCIONAR UN CAMPO */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #60a5fa;
+    border-color: #2563eb;
+}
+
+/* RADIO Y CHECKBOX */
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 6px;
+}
+
+/* BOTONES */
+.botones {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* EFECTO HOVER */
+button:hover {
+    background-color: #1d4ed8;
+}
+
+.secundario {
+    background-color: #64748b;
+}
+
+.secundario:hover {
+    background-color: #475569;
+}
+
+/* MENSAJE */
+#mensaje {
+    font-weight: bold;
+}
+
+/* HERRAMIENTAS DE BÚSQUEDA */
+.herramientas {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.herramientas input {
+    flex: 2 1 220px;
+}
+
+.herramientas select {
+    flex: 1 1 180px;
+}
+
+.herramientas button {
+    flex: 0 1 auto;
+}
+
+/* TABLA */
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+th,
+td {
+    border: 1px solid #cbd5e1;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #173b63;
+    color: white;
+}
+
+/* FILAS ALTERNADAS */
+tbody tr:nth-child(even) {
+    background-color: #f1f5f9;
+}
+
+/* BOTÓN ELIMINAR */
+.eliminar {
+    background-color: #dc2626;
+    padding: 8px 12px;
+}
+
+.eliminar:hover {
+    background-color: #b91c1c;
+}
+
+/* RESUMEN */
+.resumen {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+    background-color: #eaf1f8;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: #173b63;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 650px) {
+
+    .contenedor {
+        width: 95%;
+    }
+
+    .tarjeta {
+        padding: 15px;
+    }
+
+    .navegacion {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+
+    .botones button {
+        width: 100%;
+    }
+
+    .resumen {
+        flex-direction: column;
+    }
+}

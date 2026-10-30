@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Inscripción a Cursos</title>
+
+    <link rel="stylesheet" href="styless.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <h1>Centro de Capacitación</h1>
+        <p>Sistema de inscripción a cursos</p>
+    </header>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="navegacion">
+        <a href="#inicio">Inicio</a>
+        <a href="#registro">Inscripción</a>
+        <a href="#estudiantes">Estudiantes</a>
+    </nav>
+
+    <main class="contenedor">
+
+        <!-- INFORMACIÓN -->
+        <section id="inicio" class="tarjeta">
+            <h2>Bienvenido</h2>
+
+            <p>
+                Registra estudiantes en los cursos disponibles
+                y consulta sus inscripciones.
+            </p>
+
+            <details>
+                <summary>Información sobre los cursos</summary>
+                <p>
+                    Ofrecemos cursos de HTML, CSS, JavaScript,
+                    bases de datos y programación.
+                </p>
+            </details>
+        </section>
+
+        <!-- FORMULARIO -->
+        <section id="registro" class="tarjeta">
+
+            <h2>Formulario de inscripción</h2>
+
+            <form id="formulario">
+
+                <!-- DATOS PERSONALES -->
+                <fieldset>
+                    <legend>Datos personales</legend>
+
+                    <div class="campo">
+                        <label for="nombre">Nombre completo:</label>
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Ingrese su nombre"
+                            maxlength="60"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="correo">Correo electrónico:</label>
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            placeholder="ejemplo@gmail.com"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefono">Teléfono:</label>
+                        <input
+                            type="tel"
+                            id="telefono"
+                            name="telefono"
+                            placeholder="0999999999"
+                            pattern="[0-9]{10}"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="edad">Edad:</label>
+                        <input
+                            type="number"
+                            id="edad"
+                            name="edad"
+                            min="15"
+                            max="80"
+                            required
+                        >
+                    </div>
+
+                    <div class="campo">
+                        <label for="fecha">Fecha de inscripción:</label>
+                        <input
+                            type="date"
+                            id="fecha"
+                            name="fecha"
+                            required
+                        >
+                    </div>
+
+                </fieldset>
+
+                <br>
+
+                <!-- INFORMACIÓN ACADÉMICA -->
+                <fieldset>
+                    <legend>Información académica</legend>
+
+                    <div class="campo">
+                        <label for="curso">Seleccione un curso:</label>
+
+                        <select id="curso" name="curso" required>
+                            <option value="">Seleccione una opción</option>
+                            <option value="HTML">HTML</option>
+                            <option value="CSS">CSS</option>
+                            <option value="JavaScript">JavaScript</option>
+                            <option value="Base de Datos">Base de Datos</option>
+                            <option value="Python">Python</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="horario">Horario:</label>
+
+                        <select id="horario" name="horario" required>
+                            <option value="">Seleccione un horario</option>
+                            <option value="Mañana">Mañana</option>
+                            <option value="Tarde">Tarde</option>
+                            <option value="Noche">Noche</option>
+                        </select>
+                    </div>
+
+                    <!-- RADIO -->
+                    <p>Nivel de conocimiento:</p>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="nivel"
+                            value="Principiante"
+                            required
+                        >
+                        Principiante
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="nivel"
+                            value="Intermedio"
+                        >
+                        Intermedio
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="nivel"
+                            value="Avanzado"
+                        >
+                        Avanzado
+                    </label>
+
+                    <br><br>
+
+                    <!-- CHECKBOX -->
+                    <p>Modalidad:</p>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="modalidad"
+                            value="Presencial"
+                        >
+                        Presencial
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="modalidad"
+                            value="Virtual"
+                        >
+                        Virtual
+                    </label>
+
+                    <br><br>
+
+                    <!-- DATALIST -->
+                    <div class="campo">
+                        <label for="institucion">Institución educativa:</label>
+
+                        <input
+                            type="text"
+                            id="institucion"
+                            name="institucion"
+                            list="instituciones"
+                            placeholder="Escriba o seleccione"
+                        >
+
+                        <datalist id="instituciones">
+                            <option value="ESPOCH">
+                            <option value="Universidad Central">
+                            <option value="Universidad de Guayaquil">
+                            <option value="Otra institución">
+                        </datalist>
+                    </div>
+
+                    <!-- TEXTAREA -->
+                    <div class="campo">
+                        <label for="observaciones">Observaciones:</label>
+
+                        <textarea
+                            id="observaciones"
+                            name="observaciones"
+                            rows="4"
+                            maxlength="300"
+                            placeholder="Escriba alguna observación..."
+                        ></textarea>
+                    </div>
+
+                    <!-- FILE -->
+                    <div class="campo">
+                        <label for="archivo">Documento de identificación:</label>
+                        <input
+                            type="file"
+                            id="archivo"
+                            name="archivo"
+                            accept=".pdf,.jpg,.png"
+                        >
+                    </div>
+
+                </fieldset>
+
+                <br>
+
+                <!-- ACEPTACIÓN -->
+                <fieldset>
+                    <legend>Confirmación</legend>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            id="aceptar"
+                            required
+                        >
+                        Confirmo que los datos proporcionados son correctos.
+                    </label>
+                </fieldset>
+
+                <br>
+
+                <!-- BOTONES -->
+                <div class="botones">
+                    <button type="submit">
+                        Registrar estudiante
+                    </button>
+
+                    <button type="reset" class="secundario">
+                        Limpiar formulario
+                    </button>
+                </div>
+
+            </form>
+
+            <p id="mensaje" aria-live="polite"></p>
+
+        </section>
+
+        <!-- LISTA DE ESTUDIANTES -->
+        <section id="estudiantes" class="tarjeta">
+
+            <h2>Estudiantes inscritos</h2>
+
+            <div class="herramientas">
+
+                <input
+                    type="search"
+                    id="buscar"
+                    placeholder="Buscar por nombre..."
+                >
+
+                <select id="filtroCurso">
+                    <option value="Todos">Todos los cursos</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Base de Datos">Base de Datos</option>
+                    <option value="Python">Python</option>
+                </select>
+
+                <button type="button" id="mostrarTodos">
+                    Mostrar todos
+                </button>
+
+            </div>
+
+            <!-- TABLA -->
+            <div class="tabla-contenedor">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Curso</th>
+                            <th>Horario</th>
+                            <th>Nivel</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tablaEstudiantes">
+                        <tr>
+                            <td colspan="6">
+                                No existen estudiantes registrados.
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <!-- RESUMEN -->
+            <div class="resumen">
+                <p>
+                    Total de estudiantes:
+                    <strong id="totalEstudiantes">0</strong>
+                </p>
+
+                <p>
+                    Inscripciones de JavaScript:
+                    <strong id="totalJavaScript">0</strong>
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Práctica de Tecnologías Web - HTML, CSS y JavaScript</p>
+    </footer>
+
+</body>
+</html>
